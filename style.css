@@ -1,0 +1,182 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 420px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(44, 83, 100, 0.18);
+    padding: 44px 36px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(34, 211, 238, 0.18);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    text-shadow: 0 2px 12px #22d3eea0;
+}
+
+p {
+    color: #e0f7fa;
+    font-size: 1.08rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 18px auto 28px auto;
+    font-size: 1rem;
+    color: #0891b2;
+    background: rgba(224, 247, 250, 0.7);
+    border: 1.5px solid #22d3ee;
+    border-radius: 10px;
+    padding: 12px 14px;
+    width: 100%;
+    transition: border 0.2s, background 0.2s;
+}
+
+input[type="file"]:focus {
+    border: 1.5px solid #06b6d4;
+    background: rgba(224, 247, 250, 0.9);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 16px 0;
+    background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    box-shadow: 0 2px 16px #22d3ee44, 0 1.5px 8px #06b6d444;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 8px #fff8;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+#output {
+    width: 100%;
+}
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+    padding: 32px 22px;
+    background: rgba(34, 211, 238, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 2px 18px #22d3ee33;
+    animation: fadeIn 0.7s;
+    border: 1.5px solid #22d3ee;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.download-icon {
+    font-size: 60px;
+    color: #06b6d4;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 2px 8px #22d3eeaa);
+}
+
+.download-success {
+    color: #06b6d4;
+    font-weight: 800;
+    margin-bottom: 14px;
+    font-size: 1.18rem;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 8px #22d3eeaa;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 16px 44px;
+    background: linear-gradient(90deg, #06b6d4 0%, #22d3ee 100%);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1.13rem;
+    font-weight: 700;
+    box-shadow: 0 2px 16px #22d3ee44, 0 1.5px 8px #06b6d444;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-top: 12px;
+    letter-spacing: 0.7px;
+    text-shadow: 0 1px 8px #fff8;
+}
+
+.download-link:hover {
+    background: linear-gradient(90deg, #22d3ee 0%, #06b6d4 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+.message {
+    text-align: center;
+    margin-top: 22px;
+    color: #06b6d4;
+    font-weight: 700;
+    font-size: 1.08rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: auto 15px;
+        padding: 18px 6px;
+        min-width: unset;
+        max-width: 98vw;
+    }
+
+    .download-container {
+        padding: 16px 6px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input[type="file"] {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+        margin: 12px auto 18px auto;
+        width: 90%;
+        border-radius: 8px;
+    }
+}
